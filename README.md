@@ -11,7 +11,7 @@ Esta es una copia del documento `Lista_de_ejercicios.md` del repositorio del pro
 | Ejercicio_1 | [Conceptos básicos de IA, ejercicio 1](<Ejercicio 1 - Conceptos básicos de IA>) | - [ x ] |
 | Ejercicio_2 | [Agentes, ejercicio 1](<Ejercicio 2 - Agentes, ejercicio 1/conclusiones.pdf>) | - [ x ] | 
 | Ejercicio_3 | [Agentes, ejercicio 2](<Ejercicio 3 - Agentes, ejercicio 2/>) | - [ x ] |
-| Ejercicio_4 | [Búsqueda no informada, ejercicio 1](<Ejercicio 4 - Búsqueda no informada>) | - [ x ] |
+| Ejercicio_4 | [Búsqueda no informada, ejercicio 1](<Ejercicio 4 - Búsqueda no informada, ejercicio 1>) | - [ x ] |
 | Ejercicio_5 | [Búsqueda informada, ejercicio 1](<Ejercicio 5 - Búsqueda informada, ejercicio 1>) | - [ ] |
 | Ejercicio_6 | [Perceptrón multicapa, ejercicio 1](<Ejercicio 6 - Perceptrón multicapa, ejercicio 1>) | - [ ] |
 | Ejercicio_7 | [Clustering con k-medias, ejercicio 1](<Ejercicio 7 - Clustering con k-medias, ejercicio 1>) | - [ x ] |
