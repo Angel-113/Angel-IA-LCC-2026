@@ -1,4 +1,4 @@
-# Ejercicio 1 — Greedy y A* en el mapa de Rumania
+# Greedy y A* en el mapa de Rumania
 
 Elegí Timisoara → Bucharest, una de las parejas que sugería el ejercicio.
 
