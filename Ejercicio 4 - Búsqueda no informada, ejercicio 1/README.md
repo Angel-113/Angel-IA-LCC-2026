@@ -1,5 +1,7 @@
 # Reporte
 
+*Nota: En las capturas no ejecute individualmente a cada script de python. Cree un script que los ejecutaba por grupos.*
+
 ## 1. Tabla Comparativa de Ejecuciones
 
 | Algoritmo | Status | Path | Depth (roads) | Cost (km) | Nodos Expandidos |
