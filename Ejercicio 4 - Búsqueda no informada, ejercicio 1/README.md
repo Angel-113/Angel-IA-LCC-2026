@@ -11,7 +11,7 @@
 | **DLS** (`--limit 4`) | success | Oradea → Sibiu → Fagaras → Bucharest | 3 | 461 | 6 |
 | **IDS** | success | Oradea → Sibiu → Fagaras → Bucharest | 3 | 461 | 8 |
 
-## 2. Reporte Analítico
+## 2. Reporte
 
 ### Comparación entre BFS y UCS
 
