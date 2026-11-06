@@ -1,41 +1,34 @@
-# A* y Greedy Best-First Search
+# Reporte
 
-## Diagrama del Subgrafo (Oradea → Bucharest)
+## 1. Tabla Comparativa de Ejecuciones
 
-Las aristas muestran el costo en kilómetros y cada nodo incluye su heurística $h(n)$ basada en la distancia en línea recta hacia la meta.
+| Algoritmo | Status | Path | Depth (roads) | Cost (km) | Nodos Expandidos |
+| --- | --- | --- | --- | --- | --- |
+| **BFS** | success | Oradea → Sibiu → Fagaras → Bucharest | 3 | 461 | 5 |
+| **UCS** | success | Oradea → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest | 4 | 429 | 10 |
+| **DFS** | success | Oradea → Sibiu → Arad → Timisoara → Lugoj → Mehadia → Drobeta → Craiova → Pitesti → Bucharest | 9 | 1024 | 9 |
+| **DLS** (`--limit 2`) | cutoff | Ninguno | N/A | N/A | 3 |
+| **DLS** (`--limit 4`) | success | Oradea → Sibiu → Fagaras → Bucharest | 3 | 461 | 6 |
+| **IDS** | success | Oradea → Sibiu → Fagaras → Bucharest | 3 | 461 | 8 |
 
-```text
-                          Oradea (h=380)
-                                |
-                              (151)
-                                |
-                          Sibiu (h=253)
-                         /             \
-                      (99)             (80)
-                      /                   \
-            Fagaras (h=176)       Rimnicu Vilcea (h=193)
-                   |                        |
-                 (211)                     (97)
-                   |                        |
-                   |                  Pitesti (h=100)
-                   |                        |
-                   +------- (101) ----------+
-                           |
-                     Bucharest (h=0)
-```
+## 2. Reporte Analítico
 
-**¿A* encontró el camino de menos km? ¿Greedy coincidió o se desvió?**
+### Comparación entre BFS y UCS
 
-A* encontró el camino de menor costo con 429 km. Greedy se desvió, resultando en una ruta más costosa de 461 km.
+BFS encuentra el camino con el menor número de carreteras, obteniendo una ruta de 3 saltos y 461 km a través de Fagaras.
+UCS encuentra el camino con la menor distancia total, resultando en una ruta de 429 km y 4 saltos a través de Rimnicu Vilcea.
+BFS optimiza la profundidad, mientras que UCS optimiza el costo acumulado.
+UCS expande 10 nodos frente a los 5 de BFS, requiriendo más procesamiento para garantizar el costo mínimo en distancia.
 
-**¿Por qué Greedy puede devolver un camino más caro aunque `h` sea admisible?**
+### Comportamiento de DFS
 
-Greedy selecciona el siguiente nodo basándose exclusivamente en el menor valor de $h(n)$ yomite el costo real acumulado $g(n)$. Al llegar a Sibiu,
-Greedy eligió Fagaras porque su valor heurístico ($h=176$) es menor que el de Rimnicu Vilcea ($h=193$), ignorando que el trayecto restante
-por Fagaras encarece el costo total del viaje.
+DFS devuelve un trayecto ineficiente de 9 carreteras y 1024 km porque no ofrece garantías de optimalidad.
+Al expandir los nodos vecinos en estricto orden alfabético, el algoritmo toma una decisión subóptima en Sibiu dirigiéndose hacia Arad,
+lo que desvía la búsqueda por una ruta mucho más larga antes de alcanzar el destino.
 
-**En el camino de A*, ¿`f` tiende a no disminuir a lo largo de la ruta?**
+### Límites en DLS y relación con BFS e IDS
 
-El valor de $f(n)$ en A* aumenta de forma constante a lo largo de la ruta ($380 -> 404 -> 424 -> 428 -> 429$).
-Este crecimiento monótono ocurre porque la heurística aplicada (distancia en línea recta de la tabla AIMA) es
-consistente y admisible, asegurando que el costo estimado no sufra variaciones ilógicas entre nodos sucesivos.
+La ejecución de DLS con `--limit 2` arroja un estado `cutoff` porque la solución más próxima requiere más de dos saltos.
+Al incrementar a `--limit 4`, el algoritmo encuentra la meta exitosamente.
+Este comportamiento coincide directamente con los hallazgos de BFS e IDS, donde este último confirma que la profundidad
+de la solución óptima en carreteras es exactamente de 3 saltos, deteniéndose en su iteración `last_limit=3`.
