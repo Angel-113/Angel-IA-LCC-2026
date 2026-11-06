@@ -1,14 +1,14 @@
 # Repositorio de entrega de tareas para la materia de Inteligencia Artificial (2026)
 
-No he nombrado las carpetas de las tareas de forma adecuada (con el nombre adecuado). 
+Los ejercicios ya tienen los nombres correspondientes. (05/11/2026)
 
-# Lista de ejercicios
+## Lista de ejercicios
 
 Esta es una copia del documento 'Lista_de_ejercicios.md' del repositorio del profesor.
 
 | Nombre de la carpeta | Link del ejercicio | Estado |
 | --- | --- | --- |
-| Ejercicio_1 | [Conceptos básicos de IA, ejercicio 1] | - [ ] |
+| Ejercicio_1 | [Conceptos básicos de IA, ejercicio 1] | - [x] |
 | Ejercicio_2 | [Agentes, ejercicio 1] | - [ ] | 
 | Ejercicio_3 | [Agentes, ejercicio 2] | - [ ] |
 | Ejercicio_4 | [Búsqueda no informada, ejercicio 1] | - [ ] |
