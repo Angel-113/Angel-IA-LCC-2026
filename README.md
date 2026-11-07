@@ -15,5 +15,5 @@ Esta es una copia del documento `Lista_de_ejercicios.md` del repositorio del pro
 | Ejercicio_5 | [Búsqueda informada, ejercicio 1](<Ejercicio 5 - Búsqueda informada, ejercicio 1>) | - [ x ] |
 | Ejercicio_6 | [Perceptrón multicapa, ejercicio 1](<Ejercicio 6 - Perceptrón multicapa, ejercicio 1>) | - [ x ] |
 | Ejercicio_7 | [Clustering con k-medias, ejercicio 1](<Ejercicio 7 - Clustering con k-medias, ejercicio 1>) | - [ x ] |
-| Ejercicio_8 | [Q-learning, ejercicio 1](<Ejercicio 8 - Q-learning, ejercicio 1>) | - [ ] |
-| Ejercicio_9 | [Razonamiento lógico, ejercicio 1](<Ejercicio 9 - Razonamiento lógico, ejercicio 1>) | - [ ] |
+| Ejercicio_8 | [Q-learning, ejercicio 1](<Ejercicio 8 - Q-learning, ejercicio 1>) | - [ x ] |
+| Ejercicio_9 | [Razonamiento lógico, ejercicio 1](<Ejercicio 9 - Razonamiento lógico, ejercicio 1>) | - [ x ] |
