@@ -1,7 +1,6 @@
 # Reporte
 
-## 1. ¿Por qué `Becario(Ana)` sale en el encadenamiento hacia adelante de `AccesoNoche(Ana)` y
-no en el de hacia atrás?
+## 1. ¿Por qué `Becario(Ana)` sale en el encadenamiento hacia adelante de `AccesoNoche(Ana)` y no en el de hacia atrás?
 
 En el encadenamiento hacia adelante, el programa simplemente saca todas las conclusiones posibles
 a partir de los datos que ya tiene (es dirigido por los datos).
@@ -22,8 +21,7 @@ si Marta es miembro. Al darse cuenta de que no hay ningún hecho
 que diga que Marta es estudiante, falla, y hasta entonces se pasa a
 la siguiente regla (`R_miembro_prof`), donde ya confirma que es profesora y acierta.
 
-## 3. Si se añade el hecho `TieneCredencial(Luis)` y se vuelve a preguntar `AccesoNoche(Luis)`, ¿qué
-átomos nuevos aparecen y la consulta queda probada?
+## 3. Si se añade el hecho `TieneCredencial(Luis)` y se vuelve a preguntar `AccesoNoche(Luis)`, ¿qué átomos nuevos aparecen y la consulta queda probada?
 
 Por curiosidad hice la prueba agregando el hecho a la base y volví a
 correr el script. Como ahora Luis ya cumple con ser estudiante y tener credencial,
